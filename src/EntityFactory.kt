@@ -34,13 +34,13 @@ sealed class Entity  () {
 }
 
 fun main(){
-    val entity : Entity = EntityFactory.create(EntityType.HARD )
-    val msg = when (entity){
-        is Entity.Easy -> "Easy Class"
-        is Entity.Hard -> "Hard Class"
-        Entity.Help ->  "Help Class"
-        is Entity.Medium -> "Medium Class"
-    }
-    println(msg)
+//    these two entity are not equal
+    val entity1 = EntityFactory.create(EntityType.EASY)
+    val entity2 = EntityFactory.create(EntityType.EASY)
 
+    if(entity1 == entity2){
+        println("They are equal")
+    }else{
+        println("They are not equal")
+    }
 }
