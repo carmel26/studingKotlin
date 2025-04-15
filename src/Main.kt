@@ -8,7 +8,17 @@ fun sayHallo(greeting : String, itemToGreet : String) {
 }
 
 fun main() {
-     name = "Kotlin"
-    sayHallo("Hello ", "Word!")
-    sayHallo("Hey ", " my Friend")
+     val interestingThings = arrayOf("Kotlin", "Programming", "Comic books", 12)
+     println("Size : ${interestingThings.size}")
+//     println(interestingThings[2])
+//     println(interestingThings.get(0))
+
+    interestingThings.forEach { interestingThing ->
+        println(interestingThing)
+    }
+
+    interestingThings.forEachIndexed {
+        index, interestingThing ->
+        println("$interestingThing is at index $index")
+    }
 }
