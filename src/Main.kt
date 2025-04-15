@@ -10,6 +10,6 @@ fun sayHallo(greeting : String, vararg itemsToGreet : String) {
 }
 
 fun main() {
-     val interestingThings = listOf("Kotlin", "Programming", "Comic books", "12", "true")
-     sayHallo("Hi", "Java", "Programming", "Skills", "Java")
+     val interestingThings = arrayOf("Kotlin", "Programming", "Comic books", "12", "true")
+     sayHallo("Hi", *interestingThings)
 }
