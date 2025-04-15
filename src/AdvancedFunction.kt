@@ -16,15 +16,19 @@ fun getPrintedPredicate(): (String) -> Boolean {
 
 fun main() {
     val lists = listOf("Kotlin", "Java", "C++", "C#", "Javascript", null)
-    lists
+    val map = lists
         .filterNotNull()
-        .filter{
-            it.startsWith("C")
-        }
-        .map{
-            it.length
-        }
-        .forEach {
-        println(it)
+        .associate { it to it.length }
+
+    map.forEach{
+        println("${it.key}, ${it.value}")
     }
+
+    val language = lists.first()
+    println(language)
+    val lastlanguage = lists.last()
+    println(lastlanguage)
+
+    val findAlanguage = lists.filterNotNull().find { it.startsWith("C") }.orEmpty()
+    println(findAlanguage)
 }
