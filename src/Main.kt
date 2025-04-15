@@ -1,9 +1,8 @@
 
+var name : String? = null // mutable (changeable)
+val greeting: String? = null // immutable (unchangeable)
 fun main() {
-    val name = "Kotlin"
+     name = "Kotlin"
     println("Hello, $name!")
 
-    for (i in 1..5) {
-        println("i = $i")
-    }
 }
