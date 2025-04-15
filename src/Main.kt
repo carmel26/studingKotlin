@@ -13,5 +13,5 @@ fun greetPerson(greeting: String = "Hello", name: String = "Blandon") = println(
 
 fun main() {
      val interestingThings = arrayOf("Kotlin", "Programming", "Comic books", "12", "true")
-     greetPerson()
+      sayHallo(itemsToGreet = *interestingThings, greeting = "Bonjour",)
 }
