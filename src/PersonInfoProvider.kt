@@ -34,9 +34,10 @@ fun main(){
 }
 
 fun checkTypes(infoProvider: PersonInfoProvider){
-    if (infoProvider is SessionInfoProvide){
-        println("Is a session info provider")
-    }else{
+    if (infoProvider !is SessionInfoProvide){
         println("Not a session info provider")
+    }else{
+        println("Is a session info provider")
+        infoProvider.getSessionId()
     }
 }
