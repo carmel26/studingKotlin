@@ -1,14 +1,12 @@
-class Person (val firstName: String, val lastName: String){
-// init blocks are executed before the secondary constructor
-    init {
-        println("init 1")
-    }
+class Person (val firstName: String = "Peter", val lastName: String = "Parker"){
 
-   constructor() : this("Peter", "Parker"){
-       println("Second constructor")
-   }
-    init {
-        println("init 2")
-    }
-
+    var nickName : String? = null
+        set(value) {
+            field = value
+            println("the new NickName is now $value")
+        }
+        get(){
+            println("the return value is $field")
+            return field
+        }
 }
