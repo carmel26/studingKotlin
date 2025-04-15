@@ -30,4 +30,13 @@ fun main(){
     val provider = BasicInfoProvider()
     provider.printInfo(Person())
     provider.getSessionId()
+    checkTypes(provider)
+}
+
+fun checkTypes(infoProvider: PersonInfoProvider){
+    if (infoProvider is SessionInfoProvide){
+        println("Is a session info provider")
+    }else{
+        println("Not a session info provider")
+    }
 }
