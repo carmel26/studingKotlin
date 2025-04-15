@@ -8,17 +8,20 @@ fun sayHallo(greeting : String, itemToGreet : String) {
 }
 
 fun main() {
-     val interestingThings = arrayOf("Kotlin", "Programming", "Comic books", 12)
+     val interestingThings = listOf("Kotlin", "Programming", "Comic books", 12, true)
      println("Size : ${interestingThings.size}")
-//     println(interestingThings[2])
-//     println(interestingThings.get(0))
+     println(interestingThings.get(4))
 
-    interestingThings.forEach { interestingThing ->
-        println(interestingThing)
+    // we can also iterate like we did for the array
+    interestingThings.forEach {
+        interestingThing -> println(interestingThing)
     }
 
-    interestingThings.forEachIndexed {
-        index, interestingThing ->
-        println("$interestingThing is at index $index")
+    // map function which is using key and values
+    val mapValues = mapOf( 1 to "a", 2 to "B", 3 to "Cin")
+    mapValues.forEach {
+        key, value->
+        println("$key -> $value")
     }
+
 }
