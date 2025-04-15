@@ -34,11 +34,13 @@ sealed class Entity  () {
 }
 
 fun main(){
-//    these two entity are not equal
-    val entity1 = EntityFactory.create(EntityType.EASY)
-    val entity2 = EntityFactory.create(EntityType.EASY)
+//    these two entity1 and entity2 are now Equal
+    val entity1 = Entity.Easy("123", "John")
+    val entity2 = Entity.Easy("123", "John")
+//    entity1 and entity3 are not Equal
+    val entity3 = entity1.copy(name = "Jean")
 
-    if(entity1 == entity2){
+    if(entity1 === entity3){
         println("They are equal")
     }else{
         println("They are not equal")
