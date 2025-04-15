@@ -4,10 +4,7 @@ val greetingValue: String? = null // immutable (unchangeable)
 
 
 fun main() {
-    // the instatiation of a new class
+    // the instantiation of a new object of the class Person
     val person = Person()
-    println("${person.lastName} - ${person.firstName}")
-    person.nickName = "Benzema"
-    person.nickName = "Front"
-    println("${person.nickName}")
+    println("${person.printUserInfo()} ")
 }
