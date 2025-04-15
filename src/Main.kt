@@ -8,8 +8,9 @@ fun sayHallo(greeting : String, itemToGreet : String) {
 }
 
 fun main() {
-     val interestingThings = listOf("Kotlin", "Programming", "Comic books", 12, true)
-     println("Size : ${interestingThings.size}")
+     val interestingThings = mutableListOf("Kotlin", "Programming", "Comic books", 12, true)
+     interestingThings.add("Dogs")
+    println("Size : ${interestingThings.size}")
      println(interestingThings.get(4))
 
     // we can also iterate like we did for the array
@@ -18,7 +19,8 @@ fun main() {
     }
 
     // map function which is using key and values
-    val mapValues = mapOf( 1 to "a", 2 to "B", 3 to "Cin")
+    val mapValues = mutableMapOf( 1 to "a", 2 to "B", 3 to "Cin")
+    mapValues.put(5 ,"Jambo")
     mapValues.forEach {
         key, value->
         println("$key -> $value")
