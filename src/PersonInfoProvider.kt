@@ -6,14 +6,28 @@ interface PersonInfoProvider {
     }
 }
 
+interface SessionInfoProvide {
+    fun getSessionId(): String
+}
+
 // abstract means no need to implement all required methods
-class BasicInfoProvider : PersonInfoProvider{
+class BasicInfoProvider : PersonInfoProvider, SessionInfoProvide{
     override val providerInfo: String
         get() = "BasicInfoProvider"
+
+    override fun printInfo(person: Person) {
+        super.printInfo(person)
+        println("Additional Print Statement")
+    }
+
+    override fun getSessionId(): String {
+        return "SessionIdReturned"
+    }
 }
 
 
 fun main(){
     val provider = BasicInfoProvider()
     provider.printInfo(Person())
+    provider.getSessionId()
 }
